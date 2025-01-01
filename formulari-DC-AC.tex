@@ -1,0 +1,83 @@
+\documentclass[10pt,twocolumn]{article}
+\usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage[compact]{titlesec}
+\usepackage[catalan]{babel}
+
+\titleformat*{\section}{\large \bfseries}
+\titleformat*{\subsection}{\normalfont\bfseries}
+\titleformat*{\subsubsection}{\normalfont}
+
+\begin{document}
+
+\section{Corrent continu}
+\[ k = 9\cdot 10^9 = \frac{1}{4\pi \varepsilon_0} \implies \varepsilon_0 = \frac{1}{4\pi k} \]
+\[ \vec F=k\frac{q q'}{d^2} \vec u = q \vec E \]
+\[ \vec E=\frac{\vec F}{q'}=k\frac{q}{d^2} \vec u \]
+\[ W_{A \to B} = U_B - U_A = \int_A^B -q \vec E d \vec r \]
+\[ V_B - V_A=\frac{U_B - U_A}{q}=-\int_A^B \vec E d \vec r \]
+\[ \underset{\text{camp uniforme}}{\implies} V_B - V_A = -Er_{AB} \]
+\[ I = \frac{\Delta Q}{\Delta t} \]
+\[ P = \frac{\Delta U}{\Delta t} = \frac{\Delta Q \Delta V}{\Delta t} = I\Delta V \]
+\[ \Delta V = IR \]
+\[ R = \rho \frac{L}{S} \]
+\[ P_c = P_u + I^2 r \]
+\[ I=\frac{\varepsilon}{R_{eq} + r} \]
+\[ \si{Ah} \equiv 3600 \si{C} \]
+\[ \sum I_e = \sum I_s \]
+\[ \sum \Delta V = 0 \]
+\[ \text{Sèrie: } R_{eq} = \sum R \]
+\[ \text{Paral·lel: } \frac{1}{R_{eq}} = \sum \frac{1}{R} \]
+\[ \varepsilon_{Th} = V_A - V_B \]
+\[ R_{Th} = R_{eq}^{AB} \]
+\[ P_L \text{ màxima} \implies R_L = R_{Th} \]
+\[ C = \frac{Q}{\Delta V} = \frac{\varepsilon_0 S}{d} \]
+\[ \sigma = \frac{Q}{S} \]
+\[ E = \frac{\sigma}{\varepsilon_0} \]
+\[ U=\frac{1}{2} \frac{Q^2}{C} = \frac{1}{2}\varepsilon_0 E^2 S d \]
+\[ \eta_E = \frac{1}{2} \varepsilon_0 E^2 \]
+\section{Corrent altern}
+\[ \omega = 2\pi f = \frac{2\pi}{T} \]
+\[ v\left(t\right)=V_0 \cos \left(\omega t + \theta \right) \]
+\[ i\left(t\right)=I_0 \cos \left(\omega t + \theta - \varphi \right) \]
+\[ V_e = \frac{V_0}{\sqrt 2} \quad I_e = \frac{I_0}{\sqrt 2} \]
+\[ X = X_L - X_C = L\omega - \frac{1}{C\omega} \]
+\[ Z = \frac{V_0}{I_0} = \frac{V_e}{I_e} = \sqrt{R^2 + (X_L - X_C)^2} \]
+\[ \varphi = \arctan \frac{X_L - X_C}{R} \]
+\[ \bar V = V_0 \angle \theta \quad \bar I = I_0 \angle \left(\theta - \varphi\right) \]
+\[ \bar Z = Z\angle \varphi = R + (X_L-X_C)j = \frac{\bar V}{\bar I} \]
+\[ S = V_e I_e \]
+\[ Q = S \sin \varphi = V_e I_e \sin \varphi \]
+\[ P = S \cos \varphi = V_e I_e \cos \varphi = I_e^2 R \]
+\[ \cos \varphi = 1 \implies X' = \frac{-Z^2}{X} \]
+\[ \text{Ressonància} \implies P \text{ màxima} \implies \omega_0 = \frac{1}{\sqrt{LC}} \]
+\[ \text{Ressonància} \implies P_R = \frac{V_e^2}{R} \]
+\[ \tau \equiv \text{amplada del pols} \]
+\[ BW = \frac{1}{\tau} \]
+\[ v_t = \frac{1}{2\tau}\si{\frac{bit}{s}} = \frac{1}{2\tau} \si{baud} \]
+\subsection{Transitoris}
+\subsubsection{Càrrega RC}
+\[ I_0 = \frac{\varepsilon}{R} \]
+\[ I\left(t\right) = I_0 e^{-t/\tau_C} = \frac{\varepsilon}{R} e^{-t/\tau_C} \]
+\[ \tau_C = RC \]
+\[ Q\left(t\right) = \varepsilon C\left(1-e^{-t/\tau_C}\right) \]
+\subsubsection{Descàrrega RC}
+\[ Q_0 = \varepsilon C = cRI_0 \]
+\[ I\left(t\right) = I_0 e^{-t/\tau_C} = \frac{Q_0}{RC} e^{-t/\tau_C} \]
+\[ \tau_C = RC \]
+\[ Q\left(t\right) = Q_0 e^{-t/\tau_C} = RC I_0 e^{-t/\tau_C} \]
+\subsubsection{Càrrega RL}
+\[ I_f = \frac{\varepsilon}{R} \]
+\[ I\left(t\right) = I_f \left(1-e^{-t/\tau_L}\right) = \frac{\varepsilon}{R} \left(1-e^{-t/\tau_L}\right) \]
+\[ \tau_L = \frac{L}{R} \]
+\[ U_L = \frac{1}{2}LI_f\]
+\subsubsection{Descàrrega RL}
+\[ I_0 = \frac{\varepsilon}{R} \]
+\[ I\left(t\right) = I_0 e^{-t/\tau_L} = \frac{\varepsilon}{R} e^{-t/\tau_C} \]
+\[ U_R = \frac{1}{2}LI_0\]
+\subsection{Circuits filtre}
+\[ f\left(\omega\right) = \frac{V_{out}}{V_{in}} \]
+\subsubsection{Filtre RC}
+\[ V_{out} \text{ en condensador} \implies f\left(\omega\right) = \frac{1}{\sqrt{R^2c^2\omega^2+1}} \]
+\[ V_{out} \text{ en resistència} \implies f\left(\omega\right) = \frac{1}{\sqrt{\frac{1}{R^2c^2\omega^2}+1}} \]
+\end{document}
