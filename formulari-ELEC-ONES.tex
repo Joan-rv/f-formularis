@@ -1,6 +1,7 @@
 \documentclass[10pt,twocolumn]{article}
 \usepackage{amsmath}
 \usepackage{siunitx}
+\usepackage{bm}
 \usepackage[compact]{titlesec}
 \usepackage[catalan]{babel}
 
@@ -54,5 +55,12 @@ V_{DS} > V_{GS} - V_T \iff V_{GD} < V_T
     \text{DP} = Pt_\text{P}
 \end{gather*}
 \section{Ones}
+\subsection{Equació d'ona}
+\begin{gather*}
+    \text{Funció d'ona} \equiv \psi \left(x, t\right) \\
+    \frac{\partial^2 \psi}{\partial x^2} = \frac{1}{v^2}\frac{\partial^2\psi}{\partial t} \implies \psi\left(x, t\right) = f\left(x \pm vt\right) \\
+    f\left(x \bm{+} vt\right) \implies \text{mov cap a la dreta} \\
+    f\left(x \bm{-} vt\right) \implies \text{mov cap a l'equerra}
+\end{gather*}
 
 \end{document}
