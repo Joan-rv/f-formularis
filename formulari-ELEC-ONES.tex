@@ -4,6 +4,8 @@
 \usepackage[compact]{titlesec}
 \usepackage[catalan]{babel}
 
+\allowdisplaybreaks
+
 \titleformat*{\section}{\large \bfseries}
 \titleformat*{\subsection}{\normalfont\bfseries}
 \titleformat*{\subsubsection}{\normalfont}
@@ -11,5 +13,15 @@
 \begin{document}
 
 \section{Electrònica}
+\subsection{Díodes}
+\begin{gather*}
+V_p - V_n \geq V_\gamma \implies \text{PD} \\
+\text{no PD} \implies \text{PI} \\
+\text{PD} \implies I \neq 0 \\
+\text{PI} \implies I = 0 \\
+P_{cons} = \Delta V I \\
+\text{PI} \quad \text{i} \quad \Delta V_{Z \text{co}} \geq V_Z \implies \text{regió Zener}  \\
+\end{gather*}
 \section{Ones}
+
 \end{document}
